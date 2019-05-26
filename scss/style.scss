@@ -68,44 +68,75 @@ body {margin: 0;}
   height: 876px;
   background-image: url("../img/top.png");
   background-repeat: no-repeat;
-  background-position:right;
+  background-position:top right;
   background-size: 876px 876px;
+  .header-inner { //追記
+    width: 1200px;
+    margin: 0 auto;
+  }
   .headerul {
-    @include list;
+    height: 25px;
+    margin-top: 50px;
+    //@include list;
     float: right;
     font-size: 16px;
-    color: #fff;
-    margin: 0 167px;
-    letter-spacing: -0.17px;
-    position: relative;
+    //color: #fff;
+    //margin: 0 167px;
+    //letter-spacing: -0.17px;
+    //position: relative;
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
     li {
-      display: inline-block;
-      margin: 51px 10px;
+      //display: inline-block;
+      //margin: 51px 10px;
+      list-style: none;
+      > a {
+        color: #fff;
+        text-decoration: none;
+      }
+      img {
+        vertical-align: bottom;
+        width: 19px;
+        height: 18px;
+      }
     }
-    img {
-      width: 19pt;
-      height: 18pt;
-      position: absolute;
-      top: 50%;
-      left: 564px;
-      transform: translateY(-50%);
+    li + li {
+      margin-left: 40px;
+      &:last-of-type {
+        margin-left: 15px;
+      }
     }
+    // img {
+    //   width: 19pt;
+    //   height: 18pt;
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 564px;
+    //   transform: translateY(-50%);
+    // }
   }
   .logos {
-    position: relative;
+    //position: relative;
     float: left;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
     .headerlogo1 {
       width: 85px;
       height: 84px;
-      margin: 20.1px 20px 20px 121.1px;
+      //margin: 20.1px 20px 20px 121.1px;
     }
     .headerlogo2 {
       width: 168.07px;
       height: 40.9px;
-      position: absolute;
-      top: 50%;
-      left: 234.2px;
-      transform: translateY(-50%);
+      margin-left: 28.16px;
+      //position: absolute;
+      //top: 50%;
+      //left: 234.2px;
+      //transform: translateY(-50%);
     }
   }
   .clearfix::after {
@@ -117,7 +148,7 @@ body {margin: 0;}
     margin-top: 245px;
   }
   .h1, .headerp{
-    margin-left: 120px;
+    //margin-left: 120px;
     clear: both;
   }
   .callus {
@@ -126,12 +157,13 @@ body {margin: 0;}
     width: 169px;
     height: 53px;
     color: #fff;
-    margin-left: 120px;
+    //margin-left: 120px;
     margin-top: 30px;
     text-align: center;
     line-height: 50px;
   }
 }
+
 .aboutus {
   height: 598.3px;
   width: 1440px;
