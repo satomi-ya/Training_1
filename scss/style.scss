@@ -5,13 +5,12 @@ html {
 }
 body {margin: 0;}
 
-@mixin header_title {
+@mixin h_title {
   color: #8747ab;
-}
-@mixin header_title2 {
   letter-spacing: 1pt;
+  font-size: 50px;
 }
-@mixin header_p {
+@mixin hp {
   color: #3f546c;
   font-size: 20px;
   line-height: 26px;
@@ -23,115 +22,97 @@ body {margin: 0;}
   clear: both;
   text-align: center;
 }
-@mixin wraps {
-  text-align:center;
-  margin: 0 130px;
-}
-@mixin img_1 {
-  width: 100%;
-}
 .h1, .h2, .h3, .h4, .h5{
-  @include header_title;
+  @include h_title;
 }
-.h1, .h2, .h3, .h4, .h5, .contact_title {
-  @include header_title2;
-}
-
-.h1, .h2, .h3, .h4, .h5, .contact_title{
-  font-size: 50px;
-}
-
-.headerp, .aboutusp,  .Projectsp, .copyright {
-  @include header_p;
+.headerp, .aboutusp, .Projectsp, .copyright {
+  @include hp;
 }
 .h3, .h4, .h5, .contact_title, .copyright{
   @include title_center
 }
-.range_wraps, .Projects_wraps {
-  @include wraps;
-}
 .range_wraps, .Projects_wraps, .opinions_wraps, .contactp_wraps{
   display: flex;
 }
-
-.opiimg, .contactp_wrap {
-  @include img_1;
-}
-
 .range_wrap, .Projects_wrap, .opinions_wrap, .contactp_wrap {
   display: inline-block;
 }
-.Projects_wrap, .contactp_wrap {
-  margin: 25px;
-}
-.header {
+
+// ここからsection1
+.section1 {
   height: 876px;
   background-image: url("../img/top.png");
   background-repeat: no-repeat;
   background-position:right;
   background-size: 876px 876px;
-  .headerul {
-    @include list;
-    float: right;
-    font-size: 16px;
-    color: #fff;
-    margin: 0 167px;
-    letter-spacing: -0.17px;
-    position: relative;
-    li {
-      display: inline-block;
-      margin: 51px 10px;
+  .header {
+    .headerul {
+      @include list;
+      float: right;
+      font-size: 16px;
+      color: #fff;
+      margin: 0 167px;
+      letter-spacing: -0.17px;
+      position: relative;
+      li {
+        display: inline-block;
+        margin: 51px 10px;
+      }
+      img {
+        width: 19pt;
+        height: 18pt;
+        position: absolute;
+        top: 50%;
+        left: 564px;
+        transform: translateY(-50%);
+      }
     }
-    img {
-      width: 19pt;
-      height: 18pt;
-      position: absolute;
-      top: 50%;
-      left: 564px;
-      transform: translateY(-50%);
+    .logos {
+      position: relative;
+      float: left;
+      width: 450px;
+      margin: 20px 0 20px 121.1px;
+      .logo1 {
+        width: 85px;
+        height: 84px;
+      }
+      .logo2 {
+        width: 168.07px;
+        height: 40.9px;
+        position: absolute;
+        top: 50%;
+        left: 120px;
+        transform: translateY(-50%);
+      }
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
     }
   }
-  .logos {
-    position: relative;
-    float: left;
-    .headerlogo1 {
-      width: 85px;
-      height: 84px;
-      margin: 20.1px 20px 20px 121.1px;
-    }
-    .headerlogo2 {
-      width: 168.07px;
-      height: 40.9px;
-      position: absolute;
-      top: 50%;
-      left: 234.2px;
-      transform: translateY(-50%);
-    }
-  }
-  .clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  .h1{
+  .top_message {
     margin-top: 245px;
-  }
-  .h1, .headerp{
     margin-left: 120px;
     clear: both;
-  }
-  .callus {
-    background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
-    border-radius: 7px;
-    width: 169px;
-    height: 53px;
-    color: #fff;
-    margin-left: 120px;
-    margin-top: 30px;
-    text-align: center;
-    line-height: 50px;
+    .headerp {
+      width: 544px;
+    }
+    .callus {
+      background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
+      border-radius: 7px;
+      width: 169px;
+      height: 53px;
+      color: #fff;
+      margin-top: 30px;
+      text-align: center;
+      line-height: 50px;
+    }
   }
 }
+// ここまでsection1
+
+
 .aboutus {
   height: 598.3px;
   width: 1440px;
@@ -163,6 +144,7 @@ body {margin: 0;}
   }
   .range_wraps {
     text-align: center;
+    margin: 0 130px;
     .range_wrap {
       margin: auto 10px;
       padding-left: 30px;
@@ -183,23 +165,30 @@ body {margin: 0;}
   h4 {
     margin: 176px auto 63px;
   }
-  .projectimg {
-    height: 340px;
-    width: 312.6px;
-    margin: auto 15px;
+  .Projects_wraps {
+    text-align:center;
+    margin: 0 130px;
+    .Projects_wrap {
+      margin: 25px;
+      .projectimg {
+        height: 340px;
+        width: 312.6px;
+        margin: auto 15px;
+      }
+      .projects_p {
+        border: 1px solid #3f546c;
+        border-radius: 7px;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: #3f546c;
+        font-size: 20px;
+      }
+    }
   }
-}
-.projects_p {
-  border: 1px solid #3f546c;
-  border-radius: 7px;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  color: #3f546c;
-  font-size: 20px;
 }
 .opinions {
   h5 {
@@ -294,6 +283,8 @@ body {margin: 0;}
       top: 5px;
       left: 10px;
       .contact_title {
+        letter-spacing: 1pt;
+        font-size: 50px;
       }
       .contactp_wraps {
         font-size: 16px;
