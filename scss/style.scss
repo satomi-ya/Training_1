@@ -45,76 +45,78 @@ body {margin: 0;}
   background-repeat: no-repeat;
   background-position:right;
   background-size: 876px 876px;
-  .header {
-    .logos {
-      position: relative;
-      float: left;
-      width: 450px;
-      margin: 20px 0 20px 121.1px;
-      .logo1 {
-        width: 85px;
-        height: 84px;
+  .section1_box {
+    margin: 0 133px 0 120px;
+    .header {
+      .logos {
+        position: relative;
+        margin-top: 20px;
+        float: left;
+        width: 450px;
+        .logo1 {
+          width: 85px;
+          height: 84px;
+        }
+        .logo2 {
+          width: 168.07px;
+          height: 40.9px;
+          position: absolute;
+          top: 50%;
+          left: 120px;
+          transform: translateY(-50%);
+        }
       }
-      .logo2 {
-        width: 168.07px;
-        height: 40.9px;
-        position: absolute;
-        top: 50%;
-        left: 120px;
-        transform: translateY(-50%);
+      .headerul {
+        @include list;
+        float: right;
+        font-size: 16px;
+        margin: 0 50px;
+        letter-spacing: -0.17px;
+        position: relative;
+        li {
+          display: inline-block;
+          margin: 51px 10px;
+          text-decoration: none;
+        }
+        img {
+          width: 19pt;
+          height: 18pt;
+          position: absolute;
+          top: 50%;
+          left: 564px;
+          transform: translateY(-50%);
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+        .clearfix::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
       }
     }
-    .headerul {
-      @include list;
-      float: right;
-      font-size: 16px;
-      margin: 0 110px;
-      letter-spacing: -0.17px;
-      position: relative;
-      li {
-        display: inline-block;
-        margin: 51px 10px;
-        text-decoration: none;
+    .top_message {
+      margin-top: 245px;
+      clear: both;
+      .headerp {
+        width: 544px;
       }
-      img {
-        width: 19pt;
-        height: 18pt;
-        position: absolute;
-        top: 50%;
-        left: 564px;
-        transform: translateY(-50%);
+      .callus {
+        background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
+        border-radius: 7px;
+        width: 169px;
+        height: 53px;
+        color: #fff;
+        margin-top: 30px;
+        text-align: center;
+        line-height: 50px;
       }
       a {
-        text-decoration: none;
         color: #fff;
+        text-decoration: none;
       }
-      .clearfix::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-  }
-  .top_message {
-    margin-top: 245px;
-    margin-left: 120px;
-    clear: both;
-    .headerp {
-      width: 544px;
-    }
-    .callus {
-      background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
-      border-radius: 7px;
-      width: 169px;
-      height: 53px;
-      color: #fff;
-      margin-top: 30px;
-      text-align: center;
-      line-height: 50px;
-    }
-    a {
-      color: #fff;
-      text-decoration: none;
     }
   }
 }
