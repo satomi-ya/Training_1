@@ -46,27 +46,6 @@ body {margin: 0;}
   background-position:right;
   background-size: 876px 876px;
   .header {
-    .headerul {
-      @include list;
-      float: right;
-      font-size: 16px;
-      color: #fff;
-      margin: 0 167px;
-      letter-spacing: -0.17px;
-      position: relative;
-      li {
-        display: inline-block;
-        margin: 51px 10px;
-      }
-      img {
-        width: 19pt;
-        height: 18pt;
-        position: absolute;
-        top: 50%;
-        left: 564px;
-        transform: translateY(-50%);
-      }
-    }
     .logos {
       position: relative;
       float: left;
@@ -85,10 +64,35 @@ body {margin: 0;}
         transform: translateY(-50%);
       }
     }
-    .clearfix::after {
-      content: "";
-      display: block;
-      clear: both;
+    .headerul {
+      @include list;
+      float: right;
+      font-size: 16px;
+      margin: 0 110px;
+      letter-spacing: -0.17px;
+      position: relative;
+      li {
+        display: inline-block;
+        margin: 51px 10px;
+        text-decoration: none;
+      }
+      img {
+        width: 19pt;
+        height: 18pt;
+        position: absolute;
+        top: 50%;
+        left: 564px;
+        transform: translateY(-50%);
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
   }
   .top_message {
@@ -108,11 +112,15 @@ body {margin: 0;}
       text-align: center;
       line-height: 50px;
     }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
 }
 // ここまでsection1
 
-
+// ここからsection2
 .aboutus {
   height: 598.3px;
   width: 1440px;
@@ -137,6 +145,7 @@ body {margin: 0;}
   display: block;
   clear: both;
 }
+// ここまでsection2
 .range {
   clear: both;
   h3 {
