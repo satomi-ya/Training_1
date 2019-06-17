@@ -25,7 +25,7 @@ body {margin: 0;}
 .h1, .h2, .h3, .h4, .h5{
   @include h_title;
 }
-.headerp, .aboutusp, .Projectsp, .copyright {
+.headerp, .aboutusp_box, .Projectsp, .copyright {
   @include hp;
 }
 .h3, .h4, .h5, .contact_title, .copyright{
@@ -111,11 +111,12 @@ body {margin: 0;}
         color: #fff;
         margin-top: 30px;
         text-align: center;
-        line-height: 50px;
       }
       a {
         color: #fff;
         text-decoration: none;
+        display: block;
+        line-height: 53px;
       }
     }
   }
@@ -123,22 +124,33 @@ body {margin: 0;}
 // ここまでsection1
 
 // ここからsection2
-.aboutus {
-  height: 598.3px;
+.section2 {
+  height: 700px;
   width: 1440px;
-  float: right;
-  .h2 {
-    margin: 72px auto 24px;
-  }
-  .aboutus_img {
-    height: 598.3px;
-    width: 775px;
-    margin: 40px 59px 40px 0;
-    float: left;
-    .clearfix::after {
-      content: "";
-      display: block;
-      clear: both;
+  margin-top: 24px;
+  .section2_box {
+    .aboutus_box {
+      height: 600px;
+      margin-right: 120px;
+      padding-top: 90px;
+      .h2 {
+        margin: 0;
+      }
+      .aboutusp_box {
+        width: 486px;
+        float: right;
+      }
+    }
+    .aboutus_img {
+      height: 598.3px;
+      width: 775px;
+      margin: 0px 59px 0px 0;
+      float: left;
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
   }
 }
@@ -148,304 +160,335 @@ body {margin: 0;}
   clear: both;
 }
 // ここまでsection2
-.range {
+
+// ここからsection3
+.section3 {
   clear: both;
-  h3 {
-    margin: 132px auto 67px;
-  }
-  .range_wraps {
-    text-align: center;
-    margin: 0 130px;
-    .range_wrap {
-      margin: auto 10px;
-      padding-left: 30px;
-      p {
-        color: #3f546c;
-      }
-      .rangep {
-        color: #d8d8d8;
-      }
-      .rangeimg {
-        width: 201px;
-        margin: auto 16px;
+  .section3_box {
+    height: 429px;
+    margin: 0 180px;
+    h3 {
+      margin: 0 auto 67px;
+    }
+    .range_wraps {
+      text-align: center;
+      .range_wrap {
+        margin: auto 10px;
+        padding-left: 30px;
+        p {
+          color: #3f546c;
+        }
+        .rangep {
+          color: #d8d8d8;
+        }
+        .rangeimg {
+          width: 201px;
+          margin: auto 16px;
+        }
       }
     }
   }
 }
-.projects {
-  h4 {
-    margin: 176px auto 63px;
-  }
-  .Projects_wraps {
-    text-align:center;
-    margin: 0 130px;
-    .Projects_wrap {
-      margin: 25px;
-      .projectimg {
-        height: 340px;
-        width: 312.6px;
-        margin: auto 15px;
-      }
-      .projects_p {
-        border: 1px solid #3f546c;
-        border-radius: 7px;
-        width: 200px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        color: #3f546c;
-        font-size: 20px;
-      }
-    }
-  }
-}
-.opinions {
-  h5 {
-    margin: 128px auto 26.3px;
-  }
-  .opinions_bi {
-    background-image: url("../img/Opiimg.png");
-    background-repeat: no-repeat;
-    background-size: 1440px 800.2px;
-    height: 800.2px;
-    position: relative;
-    .opinions_wraps {
+// ここまでsection3
+
+// ここからsection4
+.section4 {
+  .section4_box {
+    width: 1440px;
+    padding: 50px 0;
+    .Projects_wraps {
       text-align:center;
-      margin: 65px 27px;
-      position: absolute;
-      top: 150px;
-      .opinions_wrap1,.opinions_wrap2 {
+      margin: 0 130px;
+      .Projects_wrap {
+        margin: 25px;
+        .projectimg {
+          height: 340px;
+          width: 312.6px;
+          margin: auto 15px;
+        }
+        .projects_p {
+          border: 1px solid #3f546c;
+          border-radius: 7px;
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          color: #3f546c;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+// ここまでsection4
+
+// ここからsection5
+.section5 {
+  .section5_box {
+    width: 1440px;
+    padding: 50px 0;
+    h5 {
+      margin: 30px 0;
+    }
+    .opinions_bi {
+      background-image: url("../img/Opiimg.png");
+      background-repeat: no-repeat;
+      background-size: 1440px 800.2px;
+      height: 800.2px;
+      position: relative;
+      .opinions_wraps {
+        text-align:center;
+        margin: 65px 27px;
+        position: absolute;
+        top: 150px;
+        .opinions_wrap1,.opinions_wrap2 {
+          background-color: #fff;
+          border-radius: 20px;
+          color: #d8d8d8;
+          text-align:left;
+          line-height: 28px;
+          letter-spacing: 0.17pt;
+          .name1, .name3 {
+            margin-right: 150px;
+          }
+          .fill1 {
+            color: #ea4972;
+            opacity: 0.5;
+          }
+          .fill2 {
+            color: #ea4972;
+          }
+          .name1, .name2 {
+            color: #8747ab;
+          }
+          .name1 {
+            color: #8747ab;
+            opacity: 0.5;
+          }
+          .name2 {
+            margin-right: 180px;
+          }
+          .name3 {
+            color: #9b9b9b;
+          }
+          .title1, .title2 {
+            text-decoration: underline;
+          }
+          .title2 {
+            color: #506883;
+          }
+        }
+        .opinions_wrap1 {
+          width: 380px;
+          height: 220px;
+          margin: 20px 10px;
+          padding: 10px 25px 25px;
+          position: relative;
+          img {
+            position: absolute;
+            top: -45px;
+          }
+          .comment1 {
+            width: 344px;
+          }
+        }
+        .opinions_wrap2 {
+          width: 450px;
+          height: 240px;
+          padding: 35px 20px 25px;
+          position: relative;
+          img {
+            position: absolute;
+            top: -45px;
+          }
+          .comment2 {
+            width: 402px;
+          }
+        }
+      }
+    }
+  }
+}
+// ここまでsection5
+
+// ここからsection6
+.section6 {
+  .section6_box {
+    width: 1440px;
+    .contactabout {
+      background-image: url("../img/Contact.png");
+      background-repeat: no-repeat;
+      background-size: 1440px 539px;
+      height: 539px;
+      color: #fff;
+      .contactabout_wrap {
+        .contact_title {
+          letter-spacing: 1pt;
+          font-size: 50px;
+          padding-top: 200px;
+          margin: 0;
+        }
+        .contactp_wraps {
+          font-size: 16px;
+          margin: 0px 263px 0 300px ;
+          width: 1000px;
+          height: 200px;
+        }
+        .contactp_wrap {
+          text-align: left;
+          margin: 50px;
+          width: 250px;
+          height: 100px;
+        }
+      }
+    }
+    .contactmap {
+      background-image: url("../img/maps.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 713px;
+      position: relative;
+      // .message {
+      //   width: 381px;
+      //   height: 552px;
+      //   position: absolute;
+      //   left: 224px;
+      //   top: -80px;
+      // }
+      .place {
+        width: 54px;
+        height: 78px;
+        position: absolute;
+        left: 824px;
+        top: 223px;
+      }
+      .partition1 {
+        position: absolute;
+        top: 560px;
+      }
+      .partition2 {
+        position: absolute;
+        top: 615px;
+      }
+      .form_box {
+        width: 262px;
+        height: 410px;
         background-color: #fff;
         border-radius: 20px;
-        color: #d8d8d8;
-        text-align:left;
-        line-height: 28px;
-        letter-spacing: 0.17pt;
-        .name1, .name3 {
-          margin-right: 150px;
+        padding: 30px 28px;
+        font-size: 10px;
+        position: absolute;
+        top: -47px;
+        left: 255px;
+        box-shadow: 10px 10px 60px 0px #8d9aa9;
+        .phone {
+          position: relative;
+          img {
+            position: absolute;
+            left: 7px;
+            top: 27px;
+          }
         }
-        .fill1 {
-          color: #ea4972;
-          opacity: 0.5;
+        p {
+          color: #3f546c;
+          margin-bottom: 9px;
+          ::-webkit-input-placeholder {
+            color: #ccc;
+          }
+          input, textarea {
+            border-radius: 7px;
+            border-color: #8d9aa9;
+            margin-top: 5px;
+          }
+          input {
+            height: 30px;
+          }
+          .text1 {
+            width: 220px;
+            border: 2px solid;
+            border-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
+            border-image-slice: 1;
+          }
+          .text2 {
+            width: 190px;
+          }
+          .text3 {
+            width: 255px;
+          }
+          .text2, .text3 {
+            border: 1px solid #8d9aa9;;
+          }
+          textarea {
+            width: 255px;
+            height: 95px;
+          }
         }
-        .fill2 {
-          color: #ea4972;
-        }
-        .name1, .name2 {
-          color: #8747ab;
-        }
-        .name1 {
-          color: #8747ab;
-          opacity: 0.5;
-        }
-        .name2 {
-          margin-right: 180px;
-        }
-        .name3 {
-          color: #9b9b9b;
-        }
-        .title1, .title2 {
-          text-decoration: underline;
-        }
-        .title2 {
-          color: #506883;
-        }
-      }
-      .opinions_wrap1 {
-        width: 380px;
-        height: 220px;
-        margin: 20px 10px;
-        padding: 10px 25px 25px;
-        position: relative;
-        img {
-          position: absolute;
-          top: -45px;
-        }
-      }
-      .opinions_wrap2 {
-        width: 450px;
-        height: 240px;
-        padding: 35px 20px 25px;
-        position: relative;
-        img {
-          position: absolute;
-          top: -45px;
-        }
-      }
-    }
-  }
-}
-.contact {
-  margin-top: 86.3px;
-  .contactabout {
-    background-image: url("../img/Contact.png");
-    background-repeat: no-repeat;
-    background-size: 1440px 539px;
-    height: 539px;
-    margin: 86.3px auto 0;
-    position: relative;
-    color: #fff;
-    .contactabout_wrap {
-      width: 1440px;
-      margin-top: 86.3px;
-      position: absolute;
-      top: 5px;
-      left: 10px;
-      .contact_title {
-        letter-spacing: 1pt;
-        font-size: 50px;
-      }
-      .contactp_wraps {
-        font-size: 16px;
-        margin: 0px 263px 0 300px ;
-        width: 1000px;
-        height: 300px;
-      }
-      .contactp_wrap {
-        text-align: left;
-        margin: 50px;
-        width: 250px;
-        height: 100px;
-      }
-    }
-  }
-  .contactmap {
-    background-image: url("../img/maps.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 713px;
-    position: relative;
-    .message {
-      width: 381px;
-      height: 552px;
-      position: absolute;
-      left: 224px;
-      top: -80px;
-    }
-    .place {
-      width: 54px;
-      height: 78px;
-      position: absolute;
-      left: 824px;
-      top: 223px;
-    }
-    .partition1 {
-      position: absolute;
-      top: 560px;
-    }
-    .partition2 {
-      position: absolute;
-      top: 615px;
-    }
-    form {
-      width: 262px;
-      height: 410px;
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 30px 28px;
-      font-size: 10px;
-      position: absolute;
-      top: -47px;
-      left: 255px;
-      box-shadow: 10px 10px 60px 0px #8d9aa9;
-      .phone {
-        position: relative;
-        img {
-          position: absolute;
-          left: 7px;
-          top: 27px;
-        }
-      }
-      p {
-        color: #3f546c;
-        margin-bottom: 9px;
-        ::-webkit-input-placeholder {
-          color: #ccc;
-        }
-        input, textarea {
+        .sendamessage {
+          background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
           border-radius: 7px;
-          border-color: #8d9aa9;
-          margin-top: 5px;
+          width: 160px;
+          height: 45px;
+          color: #fff;
+          text-align: center;
+          font-size: 15px;
+          margin-left: 100px;
         }
-        input {
-          height: 30px;
-        }
-        .text1 {
-          width: 220px;
-          border: 2px solid;
-          border-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
-          border-image-slice: 1;
-        }
-        .text2 {
-          width: 190px;
-        }
-        .text3 {
-          width: 255px;
-        }
-        .text2, .text3 {
-          border: 1px solid #8d9aa9;;
-        }
-        textarea {
-          width: 255px;
-          height: 95px;
-        }
-      }
-      .sendamessage {
-        background-image: linear-gradient(116deg, #ea4972 0%, #4a51e2 100%);
-        border-radius: 7px;
-        width: 160px;
-        height: 45px;
-        color: #fff;
-        text-align: center;
-        font-size: 15px;
-        margin-left: 100px;
       }
     }
   }
 }
 .footer {
-  height: 370px;
-  .footerul, .footerul2{
-    @include list;
-    margin-top: 40px;
-    float: left;
-    color: #3f546c;
-    letter-spacing: 0.41pt;
-    line-height: 40px;
-    font-size: 20px;
-  }
-  .footerul{
-    margin-left: 224px;
-  }
-  .footerul2{
-    margin-left: 100px;
-  }
-  .footerlogo {
-    float: right;
-    width: 10%;
-    margin: 35px 220px 3px;
-  }
-  .copyright {
-    clear: both;
-    border-top: 1px solid #3f546c;
-    padding: 20px 186px 50px 290px;
-    font-size: 12px;
-    position: relative;
-    img {
-      position: absolute;
-      left: 300px;
-      top: 23px;
+  .footer_box {
+    height: 300px;
+    .footeruls {
+      height: 300px;
+      width: 800px;
+      float: left;
+      .footerul, .footerul2{
+        @include list;
+        margin-top: 40px;
+        float: left;
+        color: #3f546c;
+        letter-spacing: 0.41pt;
+        line-height: 40px;
+        font-size: 20px;
+      }
+      .footerul{
+        margin-left: 224px;
+      }
+      .footerul2{
+        margin-left: 100px;
+      }
     }
-    .cr_span1 {
-      margin: 0 50px 0 200px;
+    .footerlogo {
+      float: right;
+      width: 10%;
+      margin: 55px 180px 30px;
     }
-    .cr_span2 {
-      margin: 0 30px;
-    }
-    .cr_span3 {
-      margin: 0 30px;
+  }
+  .copyright_box {
+    .copyright {
+      clear: both;
+      border-top: 1px solid #3f546c;
+      padding: 20px 186px 50px 290px;
+      font-size: 12px;
+      position: relative;
+      img {
+        position: absolute;
+        left: 300px;
+        top: 23px;
+      }
+      .cr_span1 {
+        margin: 0 50px 0 200px;
+      }
+      .cr_span2 {
+        margin: 0 30px;
+      }
+      .cr_span3 {
+        margin: 0 30px;
+      }
     }
   }
 }
